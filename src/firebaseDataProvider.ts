@@ -58,7 +58,7 @@ class FirebaseClient {
     Object.keys(data).forEach(key => {
       const value = data[key];
       if (value && value.toDate && value.toDate instanceof Function) {
-        data[key] = value.toDate().toISOString();
+        data[key] = value.toDate();
       }
     });
     // React Admin requires an id field on every document,
